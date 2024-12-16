@@ -7,4 +7,9 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-emailjs.init('nzxxs_Sm8ZRNAwEu9'); 
+emailjs.sendForm('service_i3eua68', 'template_42fad26', this)
+  .then(function(response) {
+    console.log('SUCCESS!', response);
+  }, function(error) {
+    console.log('FAILED...', error);
+  });
