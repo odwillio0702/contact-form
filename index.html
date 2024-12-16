@@ -27,3 +27,32 @@
     </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контактная форма</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><?php echo $translations[$lang]['title']; ?></h1>
+        <form action="process.php" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name"><?php echo $translations[$lang]['name']; ?></label>
+                <input type="text" id="name" name="name" placeholder="<?php echo $translations[$lang]['name_placeholder']; ?>" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><?php echo $translations[$lang]['email']; ?></label>
+                <input type="email" id="email" name="email" placeholder="<?php echo $translations[$lang]['email_placeholder']; ?>" required>
+            </div>
+            <div class="form-group">
+                <label for="message"><?php echo $translations[$lang]['message']; ?></label>
+                <textarea id="message" name="message" placeholder="<?php echo $translations[$lang]['message_placeholder']; ?>" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn"><?php echo $translations[$lang]['submit']; ?></button>
+        </form>
+    </div>
+</body>
+</html>
