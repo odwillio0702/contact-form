@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Настройки для отправки письма
-    $to = "your-email@example.com"; // Укажите ваш email
+    $to = "contactformodwillio0702@gmail.com"; // Укажите ваш email
     $subject = "Новое сообщение с контактной формы";
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
