@@ -7,3 +7,4 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+emailjs.init('nzxxs_Sm8ZRNAwEu9'); 
