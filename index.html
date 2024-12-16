@@ -1,86 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контактная форма</title>
+    <title>Contact Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Свяжитесь с нами</h1>
+        <h1>Contact Us</h1>
         <form action="process.php" method="POST" class="contact-form">
             <div class="form-group">
-                <label for="name">Имя</label>
-                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
-                <label for="message">Сообщение</label>
-                <textarea id="message" name="message" placeholder="Введите ваше сообщение" rows="5" required></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
             </div>
-            <button type="submit" class="btn">Отправить</button>
-        </form>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контактная форма</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1><?php echo $translations[$lang]['title']; ?></h1>
-        <form action="process.php" method="POST" class="contact-form">
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Contact Form</title>
-                <link rel="stylesheet" href="style.css">
-            </head>
-            <body>
-                <div class="container">
-                    <h1>Contact Us</h1>
-                    <form action="process.php" method="POST" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-                        </div>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-            </body>
-            </html>
-                 <div class="form-group">
-                <label for="name"><?php echo $translations[$lang]['name']; ?></label>
-                <input type="text" id="name" name="name" placeholder="<?php echo $translations[$lang]['name_placeholder']; ?>" required>
-            </div>
-            <div class="form-group">
-                <label for="email"><?php echo $translations[$lang]['email']; ?></label>
-                <input type="email" id="email" name="email" placeholder="<?php echo $translations[$lang]['email_placeholder']; ?>" required>
-            </div>
-            <div class="form-group">
-                <label for="message"><?php echo $translations[$lang]['message']; ?></label>
-                <textarea id="message" name="message" placeholder="<?php echo $translations[$lang]['message_placeholder']; ?>" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn"><?php echo $translations[$lang]['submit']; ?></button>
+            <button type="submit">Send</button>
         </form>
     </div>
 </body>
