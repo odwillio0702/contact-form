@@ -27,28 +27,7 @@
         </div>
     </div>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-    emailjs.init('nzxxs_Sm8ZRNAwEu9'); // Замени YOUR_USER_ID на свой User ID из EmailJS (можно найти в Dashboard)
-</script>
-<script>
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const form = e.target;
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-
-        emailjs.send('service_i3eua68', 'template_42fad26', data)
-            .then(() => {
-                alert('Message sent successfully!');
-                form.reset(); // Очистка формы после отправки
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                alert('Failed to send message.');
-            });
-    });
-</script>
+<script></script>
 
 </body>
 </html>
