@@ -1,9 +1,9 @@
-/* Общие стили */
 body {
-    margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Темный фон */
-    color: #f0f0f0; /* Светлый текст */
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,93 +11,59 @@ body {
 }
 
 .container {
-    text-align: center;
+    background-color: #1e1e1e;
     padding: 20px;
-    max-width: 500px;
-    width: 100%;
     border-radius: 15px;
-    background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
-    box-shadow: 5px 5px 15px #0a0a0a, -5px -5px 15px #2e2e2e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
 }
 
-/* Заголовок */
 h1 {
-    font-size: 24px;
+    text-align: center;
     margin-bottom: 20px;
-    color: #f9a825;
 }
 
-/* Форма */
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
 .form-group {
-    text-align: left;
+    margin-bottom: 15px;
 }
 
 label {
-    display: block;
+    font-size: 14px;
     margin-bottom: 5px;
-    font-weight: bold;
-    color: #f0f0f0;
 }
 
 input, textarea {
     width: 100%;
     padding: 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-    box-shadow: inset 2px 2px 5px #0a0a0a, inset -2px -2px 5px #2e2e2e;
     font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #fff;
 }
 
-input:focus, textarea:focus {
-    outline: none;
-    border: 1px solid #f9a825;
-    background-color: #292929;
+textarea {
+    resize: vertical;
+    height: 150px;
 }
 
-/* Кнопка */
-.btn {
+button {
     padding: 10px;
     font-size: 16px;
-    font-weight: bold;
-    color: #121212;
-    background-color: #f9a825;
+    background-color: #4CAF50;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
+    color: white;
     cursor: pointer;
-    box-shadow: 2px 2px 5px #0a0a0a, -2px -2px 5px #2e2e2e;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    transform: scale(1.05);
-    box-shadow: 2px 2px 10px #f9a825, -2px -2px 10px #f9a825;
-}
-
-.btn:active {
-    transform: scale(0.95);
-    box-shadow: inset 2px 2px 5px #0a0a0a, inset -2px -2px 5px #2e2e2e;
-}
-
-/* Анимация */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.container {
-    animation: fadeIn 0.8s ease-out;
+button:hover {
+    background-color: #45a049;
 }
