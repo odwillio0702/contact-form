@@ -1,25 +1,27 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Получение данных из формы
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
 
-    $to = "contactformodwillio0702@gmail.com";  // Your email address
-    $subject = "New Contact Form Message";
-    $headers = "From: $email" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               "Content-Type: text/html; charset=UTF-8";
-
-    $body = "<h2>New message from $name</h2>";
-    $body .= "<p><strong>Email:</strong> $email</p>";
-    $body .= "<p><strong>Message:</strong></p><p>$message</p>";
-
-    if (mail($to, $subject, $body, $headers)) {
-        echo "<p>Message sent successfully!</p>";
-    } else {
-        echo "<p>Error sending message. Please try again later.</p>";
+    // Проверка, что все поля заполнены
+    if (empty($name) || empty($email) || empty($message)) {
+        echo "All fields are required!";
+        exit;
     }
-} else {
-    echo "<p>Invalid request method.</p>";
+
+    // Параметры для отправки email
+    $to = "your-email@example.com"; // Замените на ваш email
+    $subject = "New message from contact form";
+    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+    $headers = "From: $email";
+
+    // Отправка email
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Message sent successfully!";
+    } else {
+        echo "Failed to send message.";
+    }
 }
 ?>
