@@ -1,14 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('.contact-form');
-    const submitButton = document.querySelector('.submit-btn');
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
-
-        setTimeout(() => {
-            form.submit();
-        }, 1000);
-    });
+// Simple form validation can be added here if needed
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("Form submitted!");
 });

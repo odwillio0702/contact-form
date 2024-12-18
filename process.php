@@ -1,27 +1,17 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Получение данных из формы
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
 
-    // Проверка, что все поля заполнены
-    if (empty($name) || empty($email) || empty($message)) {
-        echo "All fields are required!";
-        exit;
-    }
-
-    // Параметры для отправки email
-    $to = "your-email@example.com"; // Замените на ваш email
+    $to = "your-email@example.com";  // Change this to your email address
     $subject = "New message from contact form";
-    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
-    $headers = "From: $email";
+    $body = "Name: $name\nEmail: $email\nMessage: $message";
 
-    // Отправка email
-    if (mail($to, $subject, $body, $headers)) {
+    if (mail($to, $subject, $body)) {
         echo "Message sent successfully!";
     } else {
-        echo "Failed to send message.";
+        echo "Message failed to send. Please try again later.";
     }
 }
 ?>
